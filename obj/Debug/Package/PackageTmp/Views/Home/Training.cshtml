@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Page.Title = "Training Sessions";
+}
+
+<fieldset>
+    <legend>Training Aim</legend>
+    <p>Training walks will be happening during 2012 and 2013 and will be posted in our <a href="@Href("~/Home/TrainingDates")">calendar</a>. All are welcome to come along and join in.</p>
+
+    <p>The aim is for 'Regular' i.e.. Monthly, evening walks to be organised  
+        over the course of the summer with both the distance and 'difficulty' gradually increasing each time. 
+        These will initially be largely SW coastal footpath based with the expectation being that as many of the walking team attend as possible 
+        although clearly it will be difficult to agree dates when all eighteen of us are able to attend. 
+        The intention is that as we move towards November, we move onto Dartmoor and beyond (these will be weekend walks).</p>
+
+    <p><a href="https://twitter.com/intent/user?screen_name=WestHill3Peaks" target="_twitter">Follow us on Twitter</a> to keep up to date with all training news.</p>   
+
+</fieldset>
+
+
+    @Html.Partial("_twitterFeed")

@@ -1,0 +1,11 @@
+﻿@model ThreePeaksMvc.Models.CalendarItemsViewModel
+
+<fieldset style="text-align:left;">
+    <legend>Diary Dates</legend>
+@{
+    foreach (var item in Model.CalendarItems)
+    {<div id="calendarItem"><span class="title">@item.Date.Day/@item.Date.Month/@item.Date.Year</span>@item.Title</div>}  
+}
+<a href="@Href("~/Home/TrainingDates")">view full calendar</a>
+</fieldset>
+

@@ -1,0 +1,43 @@
+﻿@model ThreePeaksMvc.Models.PhotoStreamViewModel
+
+<fieldset>
+    <legend>@Model.FieldsetTitle </legend>
+        <p>@Model.DescriptionText</p>
+        <div id="thumbnailsTraining" style="display: none; text-align: center;" />
+ </fieldset>
+        
+<script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+
+        <!--
+        //var flickrTrainingUrl = "http://api.flickr.com/services/feeds/photos_public.gne?id=81721976@N03&tagmode=any&format=rss_200?&tags=" + "@Model.FlickrTag";
+        //var flickrTrainingUrl = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=508bad8fef8acefeaaddf742c25c3169&tags=" + "@Model.FlickrTag" + "&format=rest&auth_token=72157632107678906-46eac1d7a7a02dfc&api_sig=b87633094c5b1317b80552dd3ab876a4!";
+        //http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=feed122b7c1eed8ad03b49a2e27ab867&photoset_id=72157630635240178&format=rest
+        -->
+
+<script type="text/javascript" language="javascript">
+
+    function LoadImages() {
+        var flickrTrainingUrl = "http://api.flickr.com/services/feeds/photos_public.gne?id=81721976@N03&tagmode=any&format=json&jsoncallback=?&tags=" + "@Model.FlickrTag";
+        
+        $.getJSON(flickrTrainingUrl, function (data) {
+            $("#thumbnailsTraining").empty();
+            $.each(data.items, function (i, item) {
+                if (i < @Model.MaxPhotosOnPage) {
+                    $("<img/>")
+                        .css('margin', '3px')
+                        .attr({ src: item.media.m, width: '60', height: '60', id: ('thumb' + i), alt: item.title })
+                        .appendTo("#thumbnailsTraining")
+                        .wrap("<a href='" + item.link + "' target='_photo'></a> item.title");
+                }
+            });
+
+            $("#thumbnailsTraining").css('display', 'block');
+        });
+    }
+
+    $(document).ready(LoadImages());
+
+
+
+</script> 
+

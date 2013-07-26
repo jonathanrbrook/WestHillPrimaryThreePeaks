@@ -1,0 +1,58 @@
+@using Telerik.Web.Mvc.UI
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="description" content="In July 2013 24 friends of West Hill Primary School, Devon will tackle the National 3 Peaks raising money for the school and the Childrens Hospice SW" />
+        <meta name="revisit-after" content="15 days" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+        <title>@Page.Title</title>
+        
+        <link id="size-stylesheet" rel="stylesheet" type="text/css" href="@Href("~/Content/Site.css")" />
+
+        @if (Request.Browser.IsMobileDevice)
+        {
+            <meta name="viewport" content="width=device-width"/>
+            <link href="@Href("~/Content/MobileSite.css")" rel="stylesheet" type="text/css" />
+        }
+
+        @(Html.Telerik().StyleSheetRegistrar().DefaultGroup(group => group.Add("telerik.common.css").Add("telerik.forest.css").Combined(true).Compress(true)))
+    </head>
+
+    <body>
+        <div id="page">
+
+            <div id="header">                
+                <table>
+                    <tr>
+                        <td width="50%" style="padding:0px;">
+                            <a href="http://uk.virginmoneygiving.com/WestHillPrimaryThreePeaks" target="_sponsorship" title="Link opens in a new window"><img src="../../Content/images/MakeADonation.gif" style="border:0px;" alt="Make a donation using Virgin Money Giving"></a>
+                            <a href="@Href("~/")" style="display:inline-block; vertical-align:middle;"><img alt="West Hill Primary Three Peaks 2013" src="../../Content/images/WestHillPrimaryThreePeaks2013.jpg" style="border:0px; vertical-align:middle;"/></a>
+                        </td>
+                        <td width="50%" style="text-align: right; padding: 0px;" id="notForMobile">
+                            <a href="http://www.west-hill-primary.devon.sch.uk/" target="_whps"><img alt="West Hill Primary School" src="../../Content/images/West_hill_logo_new.jpg" height="100px" /></a>
+                            <a href="http://www.chsw.org.uk" target="_swch"><img alt="Childrens Hospice South West" src="../../Content/images/CHSW.jpg" /></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="menu">
+                @Html.Partial("_menu")
+            </div>
+            
+            <div id="main">
+                @RenderBody()
+            </div>
+            <div id="footer">
+                <div>West Hill Primary School</div>
+                <div><a href="http://www.west-hill-primary.devon.sch.uk/">http://www.west-hill-primary.devon.sch.uk/</a></div>
+                <div>Beech Park, West Hill, Ottery St Mary, Devon, EX11 1UQ</div>
+
+                <div>Parent Teacher & Friends Association</div>
+                <div>Registered Charity No 1041234</div>
+            </div>
+        </div>
+@(Html.Telerik().ScriptRegistrar().DefaultGroup(group => group.Combined(true).Compress(true)))</body>
+</html>

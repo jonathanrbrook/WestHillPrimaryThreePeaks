@@ -1,0 +1,201 @@
+﻿/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+body {
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #91AFD5;
+    text-decoration: none;
+}
+
+#page {
+    width: 990px;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header 
+{
+
+    padding-left: 5px;
+    border: solid;
+    border-width: 0px;
+    border-top-width: 2px;
+    border-color: #1e8a51;
+}
+
+#main 
+{
+    float: left;
+    width:100%;
+    background-color: #fff;
+    margin-bottom: 30px;
+    margin-bottom: 20px;
+    
+    /*CSS3 properties*/
+    border-radius: 4px 0 4px 4px;
+    -webkit-border-radius: 4px 0 4px 4px;
+    -moz-border-radius: 4px 0 4px 4px;
+}
+
+#footer 
+{
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+    font-size: 12px;
+    color: gray;     
+}
+
+#menu 
+{
+    border-width: 0px;
+    margin-bottom:10px;
+}
+
+
+/* Screen column settings
+----------------------------------------------------------*/
+
+#pageTwoColumnContainerLeft {
+     float: left; 
+     width:50%;
+}
+
+#pageTwoColumnContainerRight {
+     float: right;
+     width:45%;
+    padding-left: 5%;
+}
+
+#homeOddImageLine {
+    float:left; 
+    width:25%;
+}
+
+#homeOddTextLine 
+{
+    float:right; 
+    width:75%;
+}
+
+#homeEvenImageLine {
+    float:right;
+    width: 20%;
+}
+
+#homeEvenTextLine {
+    float:left;
+    width: 80%;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 
+{
+    font-family: Verdana;
+    font-size: 1.5em;
+    color: #356035;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+h1, h2 
+{
+    font-family: "Amaranth", sans-serif;
+    font-size: 2em;
+}
+
+h1
+{
+    padding-bottom: 20px;    
+}
+
+
+
+h3, h4
+{
+    padding-top: 0px;
+    margin-top: 0px;
+    color: #0066AA;
+    font-size: 1em;
+}
+
+h5, h6 
+{
+    color: #0066AA;
+    font-size: .85em;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+}
+
+td { padding: 2px;}
+
+img { border: 0;}
+
+
+/* forms   
+----------------------------------------------------------*/
+fieldset {
+    margin: 1px 0;
+    padding: 10px;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 4px;
+    
+    border: 1px solid #CCC;
+}
+
+    fieldset legend {
+        font-size: 1.1em;
+        font-weight: bold;
+        padding: 2px 4px 8px 4px;
+        color: #356035;
+    }
+    
+
+/* Twitter widget
+--------------------------------------------------------*/
+#tweets {
+    text-align: left;
+}
+
+#tweets .twtr-hd {
+
+    display: none;
+}
+
+#tweets .twtr-ft 
+{
+    display: none;
+}
+
+/* Calendar Feed
+--------------------------------------------------------*/
+
+#calendarItem 
+{
+    vertical-align: middle;
+    text-align: left;
+    padding-bottom: 5px;
+    font-size: 0.9em;
+}
+#calendarItem .title{
+    font-weight: bold;
+    color: #0066AA;
+    padding-right: 4px;
+}

@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Page.Title = "Who is taking on the challenge?";
+}
+
+<div id="pageTwoColumnContainerLeft">
+    <fieldset>
+        <legend>Three Peaks Walkers</legend>
+        <p>The National Three Peaks Challenge is not to be underestimated and completing it within the 24 hours is an exceptionally tough task. 
+        All the following walkers need your support so <a href="@Href("~/Home/Sponsorship")">please help by sponsoring</a>.</p>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Sue Nield</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Steve Walker</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Debbie Hudson</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Geoff Hudson</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;John Goodwin</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Dave Clarke</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Terry Thomson</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Lewis Jones</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Louise Knight</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Nigel Eastham</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Dave Wright</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Cheryl Haddy</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Nigel Brown</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Anna Kemp</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Sarah Routley</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Jonathan Brook</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Nigel McKay</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Steve King</div>
+    </fieldset>
+</div>
+
+<div id="pageTwoColumnContainerRight">
+    <fieldset>
+        <legend>Three Peaks Drivers</legend>
+
+        <p>The drivers are the most important part of this challenge and without them this would not be possible.</p>
+        
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Dave Underwood</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Chris Routley</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Liz Shackleton</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Mark Middleton</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Brett Gregson</div>
+        <div><img src="../../Content/images/icons/breadcrumb_separator_arrow.ico" alt="" style="vertical-align:bottom;"/> &nbsp;Jeremy Frankpitt</div>
+    </fieldset>
+</div>
+
+<br/>
+
+<div style="width:100%">
+    @Html.Partial("_photoStream", new ThreePeaksMvc.Models.PhotoStreamViewModel { FlickrTag = "Team", FieldsetTitle = "Team Photos", MaxPhotosOnPage = 100 })
+</div>
+
+
+

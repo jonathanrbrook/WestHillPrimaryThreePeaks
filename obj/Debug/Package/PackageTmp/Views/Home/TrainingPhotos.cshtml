@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Page.Title = "Training Photos";
+}
+
+
+@Html.Partial("_photoStream", new ThreePeaksMvc.Models.PhotoStreamViewModel { 
+    FlickrTag = "Training", 
+    FieldsetTitle = "Training Photos",
+    DescriptionText = "Embarrasing training photos will be added here during the year, watch out!",
+    MaxPhotosOnPage = 100
+        }
+    )
+
+

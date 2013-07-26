@@ -1,0 +1,81 @@
+﻿@model ThreePeaksMvc.Models.CalendarItemsViewModel
+
+@{  
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Page.Title = "";
+}
+
+<div id="pageTwoColumnContainerLeft">
+
+    <fieldset>
+        <legend>The Challenge Is Launched</legend>
+        <div id="homeOddTextLine">
+            <h3>Thursday 4th July - Saturday 6th July 2013</h3>
+            In July 2013 24 friends of West Hill School will tackle the National 
+            Three Peaks Challenge to raise money for a fabulous new foundation stage area and the Childrens Hospice South West charity.
+            Not only will the team climb the three peaks, but they aim to do it within 24 hours.
+        </div>
+        
+        <div class="flickrbadge">
+            <a href="http://www.flickr.com/photos/westhill3peaks/8251373417/" title="Three Peaks Launch by WestHill3Peaks, on Flickr">
+                <img src="http://farm9.staticflickr.com/8478/8251373417_240bc16648.jpg" width="100" height="100" alt="Three Peaks Launch">
+            </a>
+        </div>
+
+
+        
+        <!--<div id="homeOddImageLine">
+            <a href="@Href("~/Home/Challenge")"><img alt="Three Peaks Challenge" src="../../Content/images/ThreePeaks.jpg" width="75px" height="75px" style="padding-top:10px;"/></a>
+        </div>-->
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Reception Design Ideas</legend>
+        <div id="homeEvenTextLine">
+            <div style="padding-bottom:8px;">New reception design ideas have been uploaded to the website</div>
+            
+            <div><a href="@Href("~/Home/ReceptionDesign")">reception design pictures</a></div>
+        </div>
+        <div id="homeEvenImageLine">
+            <a href="http://www.flickr.com/photos/westhill3peaks/8252517946/" title="LuisTorres by WestHill3Peaks, on Flickr"><img src="http://farm9.staticflickr.com/8345/8252517946_5ff012e75b_t.jpg" width="100" height="72" alt="LuisTorres"></a>
+        </div>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Weather on the Peaks</legend>
+        <div id="homeOddTextLine">
+            <div style="padding-bottom:8px;">One of the biggest challenges when tackling the Three Peaks is the British weather.</div>
+            <a href="@Href("~/Home/Weather")">View the current weather on all the mountains.</a>
+        </div>
+        <div>
+            <a href="@Href("~/Home/Weather")"><img alt="Sponsorship" src="../../Content/images/Weather.bmp" width="85px" height="85px"/></a>
+        </div>
+    </fieldset>
+
+
+    @Html.Partial("_photoStream", new ThreePeaksMvc.Models.PhotoStreamViewModel {FlickrTag = "Homepage", FieldsetTitle = "Training Photos", MaxPhotosOnPage = 12})
+
+</div>
+
+<div id="pageTwoColumnContainerRight">
+    <fieldset>
+        <legend>Sponsorship</legend>
+
+        <div id="homeEvenTextLine">
+            The challenge is on. The following link will take you through to all our <a href="@Href("~/Home/Sponsorship")">sponsorship details</a>.
+            <br/><br/>
+            ... or donate straight away by clicking on this 'Virgin Donate Now' image
+        </div>
+        <div id="homeEvenImageLine">
+            <a href="http://uk.virginmoneygiving.com/WestHillPrimaryThreePeaks" title="Link opens in a new window" target="_sponsorship"><img src="http://uk.virginmoneygiving.com/giving/Images/banners/106x139_donate.png" height="70" border="0" alt="Make a donation using Virgin Money Giving"></a>
+        </div>
+    </fieldset>
+
+
+    @Html.Partial("_twitterFeed")
+
+    @Html.Partial("_calendarFeed", Model)
+
+</div>

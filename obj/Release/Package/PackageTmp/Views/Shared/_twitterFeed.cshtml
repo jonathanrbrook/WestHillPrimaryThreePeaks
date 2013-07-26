@@ -1,0 +1,33 @@
+﻿<div id="tweets">
+    <fieldset>
+        <legend>Twitter Feed</legend>
+        <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+            new TWTR.Widget({
+                version: 2,
+                type: 'profile',
+                rpp: 5,
+                interval: 30000,
+                width: 400,
+                height: 300,
+                theme: {
+                    shell: {
+                        background: 'transparent',
+                        color: '#1e8a51'
+                    },
+                    tweets: {
+                        background: 'transparent',
+                        color: '#696969',
+                        links: '#0066AA'
+                    }
+                },
+                features: {
+                    scrollbar: false,
+                    loop: false,
+                    live: false,
+                    behavior: 'all'
+                }
+            }).render().setUser('WestHill3Peaks').start();
+        </script>
+    </fieldset>
+</div>

@@ -1,0 +1,42 @@
+﻿@model ThreePeaksMvc.Models.PhotoStreamViewModel
+
+<fieldset>
+    <legend>@Model.FieldsetTitle </legend>
+        <p>@Model.DescriptionText</p>
+        <div id="thumbnailsTraining" style="display: none; text-align: center;" />
+ </fieldset>
+        
+<script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+
+<script type="text/javascript" language="javascript">
+
+    function LoadImages() {
+        var flickrTrainingUrl = "http://api.flickr.com/services/feeds/photos_public.gne?id=81721976@N03&extras=url_m&per_page=6&page=1&tagmode=any&format=json&jsoncallback=?&tags=" + "@Model.FlickrTag";
+
+        $.getJSON(flickrTrainingUrl, function (data) {
+            $("#thumbnailsTraining").empty();
+            $.each(data.items, function (i, item) {
+                if (i < @Model.MaxPhotosOnPage) {
+                    
+                    $("<div>").appendTo("#thumbnailsTraining");
+
+                    $("<img/>")
+                        .css('margin', '3px')
+                        .attr({ src: item.media.m, width: '600', height: '600', id: ('thumb' + i), alt: item.title })
+                        .appendTo("#thumbnailsTraining")
+                        .wrap("<a href='" + item.link + "' target='_photo'></a> item.title");
+
+                    $("</div>").appendTo("#thumbnailsTraining");
+                }
+            });
+
+            $("#thumbnailsTraining").css('display', 'block');
+        });
+    }
+
+    $(document).ready(LoadImages());
+
+
+
+</script> 
+

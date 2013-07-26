@@ -1,0 +1,31 @@
+﻿@using Telerik.Web.Mvc.UI
+
+@(Html.Telerik().Menu().Name("Menu")
+     .Items(menu =>
+                {
+                    menu.Add().Text("Home").Url("~/");
+                    menu.Add().Text("Challenge").Url("~/Home/Challenge").Items(item =>
+                                                                                   {
+                                                                                       item.Add().Text("Reception Design").Url("~/Home/ReceptionDesign");
+                                                                                   });
+                    menu.Add().Text("Sponsorship").Url("~/Home/Sponsorship");
+                    menu.Add().Text("Training").Url("~/Home/Training").Items(item =>
+
+                                                                                 {
+                                                                                     item.Add().Text("Aim + News").Url("~/Home/Training");
+                                                                                     item.Add().Text("Training Dates").Url("~/Home/TrainingDates");
+                                                                                     item.Add().Text("Training Photos").Url("~/Home/TrainingPhotos");
+                                                                                     item.Add().Text("Training Slide Show").Url("~/Home/TrainingSlideShow");
+                                                                                 });
+                    menu.Add().Text("Geography").Url("~/Home/Map").Items(item =>
+                                                           {
+                                                               item.Add().Text("Map").Url("~/Home/Map");
+                                                               item.Add().Text("3D Maps").Url("~/Home/ThreeDMaps");
+                                                               item.Add().Text("Weather").Url("~/Home/Weather");
+                                                           }
+
+                        );
+                    menu.Add().Text("Who").Url("~/Home/About");
+                }
+           )
+ )
